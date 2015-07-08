@@ -11,4 +11,6 @@ var Main = React.createClass({
 });
 
 // Renders the file
-React.render(<Main />, document.getElementById('app'));
+// React.render(<Main />, document.getElementById('app'));
+
+module.exports = Main;
