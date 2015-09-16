@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a318f86-4933-468b-bd8e-91f499e231c2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Whatever/app/components/Main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PSReact/ch1/ShoppingList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PSReact/ch1/ch1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PSReact/ch1/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Whatever/public/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Whatever/webpack.config.js" />
-      <change type="DELETED" beforePath="E:\GH\Reactoring\Old\TharnNote\app\app.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\GH\Reactoring\Old\TharnNote\app\components\Home.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\GH\Reactoring\Old\TharnNote\app\components\Main.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\GH\Reactoring\Old\TharnNote\app\config\routes.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\GH\Reactoring\Old\TharnNote\package.json" afterPath="" />
-      <change type="DELETED" beforePath="E:\GH\Reactoring\Old\TharnNote\public\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\GH\Reactoring\Old\TharnNote\webpack.config.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PSReact/ch1/ShoppingList.js" afterPath="$PROJECT_DIR$/PSReact/ch1/ShoppingList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PSReact/ch1/index.html" afterPath="$PROJECT_DIR$/PSReact/ch1/index.html" />
     </list>
     <ignored path="Reactoring.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +27,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PSReact/ch1/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5">
-              <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+            <state vertical-scroll-proportion="-9.807693">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -49,8 +37,8 @@
       <file leaf-file-name="ShoppingList.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PSReact/ch1/ShoppingList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24637681">
-              <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.96209586">
+              <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -374,16 +362,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PSReact/ch1/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PSReact/ch1/ShoppingList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24637681">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.96209586">
+          <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
           <folding />
         </state>
       </provider>
