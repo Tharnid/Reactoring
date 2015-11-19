@@ -3,6 +3,9 @@
 var gulp = require('gulp');
 var connect = require('gulp-connect'); //Runs a local dev server
 var open = require('gulp-open'); //Open a URL in a web browser
+var browserify = require('browserify'); // Bundles JS
+var reactify = require('reactify');  // Transforms React JSX to JS
+var source = require('vinyl-source-stream'); // Use conventional text streams with Gulp
 
 // local configuration
 
@@ -11,9 +14,9 @@ var config = {
     devBaseUrl: 'http://www.tharnode.com',
     paths: {
         html: './src/*.html',
-        //js: './src/**/*.js',
-        dist: './dist'
-        //mainJs: './src/main.js'
+        js: './src/**/*.js',
+        dist: './dist',
+        mainJs: './src/main.js'
     }
 };
 
@@ -27,12 +30,14 @@ gulp.task('connect', function() {
     });
 });
 
-// Opens html files
+// open page
 
 gulp.task('open', ['connect'], function() {
     gulp.src('dist/index.html')
         .pipe(open({ uri: config.devBaseUrl + ':' + config.port + '/'}));
 });
+
+// Gulp Tasks
 
 gulp.task('html', function() {
     gulp.src(config.paths.html)
@@ -40,10 +45,21 @@ gulp.task('html', function() {
         .pipe(connect.reload());
 });
 
+gulp.task('js', function() {
+    browserify(config.paths.mainJs)
+        .transform(reactify)
+        .bundle()
+        .on('error', console.error.bind(console))
+        .pipe(source('bundle.js'))
+        .pipe(gulp.dest(config.paths.dist + '/scripts'))
+        .pipe(connect.reload());
+});
+
 gulp.task('watch', function() {
    gulp.watch(config.paths.html, ['html']);
+    gulp.watch(config.paths.js, ['js']); // , 'lint'
 });
 
 //gulp.task('default', ['html', 'js', 'css', 'lint', 'open', 'watch']);
 
-gulp.task('default', ['html', 'open']);
+gulp.task('default', ['html', 'js', 'open', 'watch']);
