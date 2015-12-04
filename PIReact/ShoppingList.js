@@ -3,8 +3,8 @@ var priceToUSDString = function(price) {
 };
 
 var ShoppingItemRow = React.createClass({
-    render: function() {
-        return React.DOM.li({},
+   render: function() {
+       return React.DOM.li({},
             React.DOM.ul({},
                 React.DOM.li({className: 'name'}, this.props.item.name),
                 React.DOM.li({className: 'quantity'}, this.props.item.quantity),
@@ -12,43 +12,45 @@ var ShoppingItemRow = React.createClass({
                     priceToUSDString(this.props.item.price)
                 )
             )
-        );
-    }
+       );
+   }
 });
+
 var ShoppingItemRowComponent = React.createFactory(ShoppingItemRow);
 
 var ShoppingTotal = React.createClass({
-    render: function() {
-        var total = 0;
-        var item;
-        for (var itemNum in this.props.items) {
-            item = this.props.items[itemNum];
-            total += item.price;
-        }
+   render: function() {
+       var total = 0;
+       var item;
+       for (var itemNum in this.props.item) {
+           item = this.props.items[itemNum];
+           total += item.price;
+       }
 
-        return React.DOM.ul({className: 'total'},
-            React.DOM.li({}, "Total"),
-            React.DOM.li({}, priceToUSDString(total))
-        );
-    }
+       return React.DOM.ul({className: 'total'},
+           React.DOM.li({}, "Total"),
+           React.DOM.li({}, priceToUSDString(total))
+       );
+   }
 });
+
 var ShoppingTotalComponent = React.createFactory(ShoppingTotal);
 
-
 var ShoppingList = React.createClass({
-    render: function() {
-        var itemRows = this.props.items.map(function(item) {
-            return ShoppingItemRowComponent({item: item, key: item.name});
-        });
+   render: function() {
+       var itemRows = this.props.items.map(function(item) {
+           return ShoppingItemRowComponent({item: item, key: item.name });
+       });
 
-        return React.DOM.div({},
-            React.DOM.ol({className: "items"},
-                itemRows
-            ),
-            ShoppingTotalComponent({items: this.props.items})
-        );
-    }
+       return React.DOM.div({},
+        React.DOM.ol({className: "items"},
+            itemRows
+        ),
+       ShoppingTotalComponent({ items: this.props.items})
+       );
+   }
 });
+
 var ShoppingListComponent = React.createFactory(ShoppingList);
 
 var itemList = [
@@ -75,4 +77,4 @@ var itemList = [
 ];
 
 React.render(ShoppingListComponent({items: itemList}),
-    document.getElementById('here'));
+        document.getElementById('here'));
