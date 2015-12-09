@@ -39,7 +39,7 @@ var ShoppingTotalComponent = React.createFactory(ShoppingTotal);
 var ShoppingList = React.createClass({
    render: function() {
        var itemRows = this.props.items.map(function(item) {
-           return ShoppingItemRowComponent({item: item, key: item.name });
+           return ShoppingItemRowComponent({item: item, key: item.name });  // key special attribute for React to track things within an array
        });
 
        return React.DOM.div({},
@@ -76,5 +76,5 @@ var itemList = [
     }
 ];
 
-React.render(ShoppingListComponent({items: itemList}),
+React.render(ShoppingListComponent({items: itemList}),  // props: proplist
         document.getElementById('here'));

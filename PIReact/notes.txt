@@ -2,3 +2,10 @@ ReactJS
 =======
 
 Props life blood of ReactJS...props are for passing through to components
+
+JSX Commands
+============
+
+jsx -x jsx . .
+
+jsx -w -x jsx . . (watches directories)
